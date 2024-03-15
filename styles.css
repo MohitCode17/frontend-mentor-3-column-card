@@ -1,0 +1,124 @@
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --lightgray: hsl(0, 0%, 95%);
+
+  --bigShouldersFont: "Big Shoulders Display", sans-serif;
+  --lexendDecaFont: "Lexend Deca", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--lexendDecaFont);
+  background-color: var(--lightgray);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.box {
+  padding: 2.5rem;
+}
+
+.box h1 {
+  text-transform: uppercase;
+  font-family: var(--bigShouldersFont);
+  color: var(--lightgray);
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.box p {
+  color: var(--transparentWhite);
+  margin-bottom: 4rem;
+  line-height: 1.6rem;
+}
+
+button {
+  border: none;
+  border: 1px solid var(--lightgray);
+  background-color: var(--lightgray);
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 1px solid var(--lightgray);
+  color: var(--lightgray);
+  background-color: transparent;
+}
+
+.btn1 {
+  color: var(--brightOrange);
+}
+
+.btn2 {
+  color: var(--darkCyan);
+}
+
+.btn3 {
+  color: var(--veryDarkCyan);
+}
+
+.box1 {
+  background-color: var(--brightOrange);
+}
+
+.box2 {
+  background-color: var(--darkCyan);
+}
+
+.box3 {
+  background-color: var(--veryDarkCyan);
+}
+
+.attribution {
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.attribution a {
+  color: var(--brightOrange);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    margin: 2rem 1rem;
+  }
+
+  .box p {
+    margin-bottom: 2rem;
+  }
+}
